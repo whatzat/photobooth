@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    <title> photobooth </title>
+    <link rel="icon" href="{{ url_for('static',filename='Styles/favicon.png') }}" type="image/gif">
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+    <!-- load bootstrap -->
+    <link rel="stylesheet" href="{{ url_for('static',filename='Styles/bootstrap-4.2.1-dist/css/bootstrap.min.css') }}">
+
+    <!-- load lightbox.css -->
+    <link rel="stylesheet" href="{{ url_for('static',filename='Styles/lightbox2-2.11.1/src/css/lightbox.css') }}"/>
+
+    <!-- load main.css -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='Styles/main.css') }}">
+
+    <header class="page-header header container-fluid">
+
+  </head>
+<body>
+
+    <!-- create navigation bar -->
+    <nav class="navbar">
+    <a class="navbar-brand" href="#">whitney + nick</a>
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="/diy">booth build</a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- welcome message -->
+    <div class="welcome_message">
+      <p></p>
+      <h3> welcome to the gallery!</h3>
+      <p></P>
+      <p> click an image to load the full res version and feel free to download to your mobile device. </p>
+      <p></p>
+    </div>
+
+    <!-- <div class="gallery_lightbox">
+        {% for photo in photos_names %}
+            <a href="{{url_for('static', filename=photo)}}" data-lightbox="images">
+                <img src="{{url_for('static', filename=photo)}}" alt="{{photo}}" >
+            </a>
+        {% endfor %}
+    </div> -->
+
+    <div class="gallery_lightbox">
+        {% for i in photos_list_nested %}
+            <a href="{{url_for('static', filename=i[0])}}" data-lightbox="images">
+            <img src="{{url_for('static', filename=i[1])}}" alt="{{photo}}" ></a>
+        {% endfor %}
+    </div>
+
+    <!-- load jQuery js script -->
+    <script src="{{ url_for('static',filename='Styles/jquery-3.4.1.min.js') }}"></script>
+
+    <!-- load bootstrap js script -->
+    <script src="{{ url_for('static',filename='Styles/bootstrap-4.2.1-dist/js/bootstrap.min.js') }}"></script>
+
+    <!-- load lightbox js script -->
+    <script src= "{{ url_for('static',filename='Styles/lightbox2-2.11.1/src/js/lightbox.js') }}" ></script>
+
+  </body>
+</html>

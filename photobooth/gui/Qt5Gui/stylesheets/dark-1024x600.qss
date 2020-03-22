@@ -1,0 +1,277 @@
+/* General - backgrounds */
+
+QWidget {
+    background-color: transparent;  /* this color overlays on all pages of UI - dont use */
+    color: #FFFFFF; /* blue font color*/
+    font-family: LiberationSans, bold;
+    font-size: 20px;
+}
+
+/* general - color applies during count down and image preview */
+
+QMainWindow {
+    background: #000000; /*gray*/
+    color: #eeeeee;
+}
+
+/* general - unpressed buttons - inactive home screen, setting save/exit, quit yes/no buttons */
+
+QPushButton {
+    background-color: #A9A9AC;
+    border-style: outset;
+    border-width: 1px;
+    border-radius: 5px;
+    border-color: #eeeeee;
+    padding: 10px;
+}
+
+/* general - pressed buttons - inactive home screen, setting save/exit, quit yes/no buttons */
+
+QPushButton:pressed {
+    background-color: rgba(255, 27, 0, 200); /*transparent red*/
+}
+
+/* idle screen */
+
+/* idle screen - arrow image */
+
+QFrame#IdleMessage {
+    background-image: url(/home/pi/Documents/photobooth/photobooth/gui/Qt5Gui/images/Splash Screen 1920x1080.png);
+    background-repeat: no-repeat;
+    padding: 20px 650px 200px 75px;
+}
+
+/* idle screen - "hit the" message box */
+
+/*QFrame#IdleMessage QLabel {
+    font-size: 20px;
+    border-style: outset;
+    border-width: 1px;
+    border-radius: 5px;
+    qproperty-alignment: AlignCenter;
+    width: 300px;
+}*/
+
+/* idle screen - "Click here to start" photo booth trigger (unpressed) */
+
+QFrame#IdleMessage QPushButton {
+    background-color: rgba(255, 27, 0, 200);
+    border: outset;
+    border-width: 2px;
+    border-radius: 5px;
+    height: 125px;
+    color: #FFFFFF;
+    font-size: 20px;
+    text-align: center;
+    
+}
+
+QFrame#IdleMessage QPushButton:pressed {
+    background-color: rgba(255, 27, 0, 200);
+    color: #eeeeee;
+}
+
+/* greeter screen  */
+
+QFrame#GreeterMessage {
+    padding: 200px 200px 200px 200px;
+}
+
+/* greeter screen - "get ready for xxx images" message*/
+
+/* QFrame#GreeterMessage QLabel#title {
+    background-color: #000000;
+    font-size: 20px;
+    margin: 0;
+    padding: 0;
+    qproperty-alignment: AlignCenter;
+}*/
+
+/* greeter screen - "starting countdown" message*/
+
+QFrame#GreeterMessage QPushButton#button {
+    background-color: #000000;
+    border: none;
+    font-size: 50px;
+    margin: 0;
+    /*min-height: 160px;*/
+    padding: 60;
+    text-align: center;
+    
+}
+
+/* greeter screen - "Get ready for XXX pictures..." message*/
+
+QFrame#GreeterMessage QLabel#message {
+    font-size: 75px;
+    margin: 0;
+    padding: 0;
+    qproperty-alignment: AlignCenter;
+}
+
+/* Countdown Screen */
+
+/*QFrame#CountdownMessage {
+    background-color: #000000;
+    border-style: outset;
+    border-width: 2px;
+    border-radius: 30px;
+    border-color: #eeeeee;
+    margin: 20px;
+    padding: 60px;
+}*/
+
+/* processing screen */
+
+/* processing screen - camera graphic */
+
+QFrame#PoseMessage {
+    background-image: url(/home/pi/Documents/photobooth/photobooth/gui/Qt5Gui/images/Photo Count Screen 1920x1080 thick.png);
+    background-repeat: no-repeat;
+    padding: 700px 80px 80px 80px;
+}
+
+/* processing screen - picture/image count message */
+
+QFrame#PoseMessage QLabel {
+    font-size: 50px;
+    qproperty-alignment: AlignCenter;
+}
+
+/* wait screen */
+
+QFrame#WaitMessage {
+    padding: 350px 80px 80px 80px;
+}
+
+/* wait screen - "starting the photobooth..." message*/
+
+QFrame#WaitMessage QLabel {
+    font-size: 20px;
+    qproperty-alignment: AlignCenter;
+}
+
+/* post process screen */
+
+QFrame#PictureMessage {
+    margin: 30px;
+}
+
+/* post process screen - Transparent Overlay Box */
+
+/*QWidget#TransparentOverlay {
+    background-color: #aaeeeeee;
+    border-style: outset;
+    border-width: 2px;
+    border-radius: 30px;
+    border-color: #eeeeee;
+    color: #333333;
+    padding: 40px;
+}*/
+
+/* post process screen - "happy?" message */
+
+QWidget#PostprocessMessage QLabel {
+    color: #333333;
+    font-size: 20px;
+    qproperty-alignment: AlignCenter;
+}
+
+/* post process screen - "Start over" button */
+
+QWidget#PostprocessMessage QPushButton {
+    background-color: transparent;
+    font-family: LiberationSans, bold;
+    border-color: transparent;
+    margin: 20px;
+}
+
+QWidget#PostprocessMessage QPushButton:pressed {
+    background-color: transparent;
+
+}
+
+QWidget#PostprocessMessage QPushButton:disabled {
+    background-color: transparent;
+    color: #33eeeeee;
+    border-color: transparent;
+
+}
+
+/* settings screen */
+
+QTabWidget::pane {
+    background-color: #eeeeee;
+    border-style: outset;
+    border-width: 1px;
+    border-radius: 15px;
+    border-color: #eeeeee;
+    color: #eeeeee;
+    padding: 10px;
+}
+
+QTabWidget::tab-bar {
+    alignment: center;
+}
+
+QTabBar::tab {
+    background-color: transparent;
+    border-style: outset;
+    border-width: 2px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    border-color: #eeeeee;
+    color: #eeeeee;
+    padding: 8px;
+}
+
+QTabBar::tab:selected {
+    background-color: #33ffffff;
+}
+
+QGroupBox {
+    background-color: transparent;
+    border-style: outset;
+    border-width: 1px;
+    border-radius: 15px;
+    border-color: #eeeeee;
+    margin: 0px;
+    padding: 4px;
+}
+
+QTabWidget QWidget {
+    color: #333333;
+    font-size: 30px;
+}
+
+QCheckBox::indicator {
+    width: 30px;
+    height: 30px;
+    background-color: transparent;
+    border-style: outset;
+    border-width: 2px;
+    border-radius: 5px;
+    border-color: #333333;
+}
+
+QCheckBox::indicator::checked {
+    background-image: url(photobooth/gui/Qt5Gui/images/checkmark.png);
+    background-repeat: no-repeat;
+}
+
+QComboBox, QDateEdit, QLineEdit, QSpinBox, QTimeEdit {
+    background-color: #eeeeee;
+    color: #333333;
+}
+
+QComboBox QAbstractItemView {
+    background-color: #cccccc;
+    color: #333333;
+    selection-background-color: #eeeeee;
+    selection-color: #333333;
+}
+
+QComboBox QAbstractItemView::item {
+    margin: 5px;
+    min-height: 50px;
+}
