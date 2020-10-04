@@ -36,7 +36,7 @@ QPushButton:pressed {
 /* idle screen - arrow image */
 
 QFrame#IdleMessage {
-    background-image: url(/home/pi/Documents/photobooth/photobooth/gui/Qt5Gui/images/Splash Screen 1920x1080.png);
+    background-image: url(/home/pi/Documents/photobooth/photobooth/gui/Qt5Gui/images/Splash Screen 1920x1200.png);
     background-repeat: no-repeat;
     padding: 20px 650px 200px 75px;
 }
