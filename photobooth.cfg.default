@@ -1,0 +1,74 @@
+[Gui]
+module = PyQt5
+fullscreen = False
+width = 1024
+height = 600
+hide_cursor = False
+style = dark (1024 x 600 px)
+
+[Camera]
+module = gphoto2-commandline
+rotation = 0
+
+[Gpio]
+enable = False
+exit_pin = 24
+trigger_pin = 23
+lamp_pin = 4
+chan_b_pin = 17
+chan_r_pin = 27
+chan_g_pin = 22
+
+[Printer]
+enable = True
+pdf = False
+confirmation = True
+module = PyQt5
+width = 148
+height = 100
+
+[Photobooth]
+show_preview = True
+greeter_time = 3
+countdown_time = 8
+display_time = 5
+postprocess_time = 60
+overwrite_error_message = 
+
+[Picture]
+num_x = 2
+num_y = 2
+size_x = 3496
+size_y = 2362
+inner_dist_x = 20
+inner_dist_y = 20
+outer_dist_x = 40
+outer_dist_y = 40
+skip = 
+background = 
+
+[Storage]
+basedir = %Y-%m-%d
+basename = photobooth
+keep_pictures = False
+
+[Mailer]
+enable = False
+sender = photobooth@example.com
+recipient = photobooth@example.com
+subject = A new picture from the photobooth
+message = Sent by the photobooth (https://github.com/reuterbal/photobooth)
+server = localhost
+port = 25
+use_auth = True
+user = 
+password = 
+use_tls = False
+
+[UploadWebdav]
+enable = False
+url = https://example.com/remote.php/webdav/Photobooth/
+use_auth = True
+user = 
+password = 
+
