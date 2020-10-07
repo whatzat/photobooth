@@ -12,7 +12,7 @@ def photos():
 
     #create and sort photo list
     os.chdir('/')
-    photos_list = os.listdir('Users/whatzat/photobooth/server/static/Images')
+    photos_list = os.listdir('home/pi/photobooth/server/static/Images')
     photos_list.sort()
 
     #function to convert list to nested list

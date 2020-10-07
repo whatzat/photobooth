@@ -36,7 +36,7 @@ QPushButton:pressed {
 /* idle screen - arrow image */
 
 QFrame#IdleMessage {
-    background-image: url(/home/pi/Documents/photobooth/photobooth/gui/Qt5Gui/images/Splash screen 1920x1200.png);
+    background-image: url(/home/pi/photobooth/photobooth/gui/Qt5Gui/images/Splash screen 1920x1200.png);
     background-repeat: no-repeat;
     padding: 20px 650px 200px 75px;
 }
@@ -126,7 +126,7 @@ QFrame#GreeterMessage QLabel#message {
 /* processing screen - camera graphic */
 
 QFrame#PoseMessage {
-    background-image: url(/home/pi/Documents/photobooth/photobooth/gui/Qt5Gui/images/Photo Count Screen 1920x1080 thick.png);
+    background-image: url(/home/pi/photobooth/photobooth/gui/Qt5Gui/images/Photo Count Screen 1920x1080 thick.png);
     background-repeat: no-repeat;
     padding: 700px 80px 80px 80px;
 }

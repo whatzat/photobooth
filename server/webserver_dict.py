@@ -8,7 +8,7 @@ app = Flask(__name__)
 def photos():
 
     os.chdir('/')
-    photos_list = os.listdir('/Users/whatzat/photobooth/server/static/Images')
+    photos_list = os.listdir('/home/pi/photobooth/server/static/Images')
     photos_list = ['Images/' + s for s in photos_list]
     photos_list.sort()
     # for x in photos_list:
@@ -31,4 +31,4 @@ def diy():
     return render_template ('diy.html')
 
 if __name__ == "__main__":
-    app.run(debug=flase, port=80, host='0.0.0.0')
+    app.run(debug=true, port=80, host='0.0.0.0')
